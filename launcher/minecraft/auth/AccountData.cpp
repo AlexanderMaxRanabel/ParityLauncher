@@ -118,17 +118,6 @@ void profileToJSONV3(QJsonObject &parent, MinecraftProfile p, const char * token
         out["cape"] = p.currentCape;
     }
 
-    {
-        QJsonObject skinObj;
-        skinObj["id"] = p.skin.id;
-        skinObj["url"] = p.skin.url;
-        skinObj["variant"] = p.skin.variant;
-        if(p.skin.data.size()) {
-            skinObj["data"] = QString::fromLatin1(p.skin.data.toBase64());
-        }
-        out["skin"] = skinObj;
-    }
-
     QJsonArray capesArray;
     for(auto & cape: p.capes) {
         QJsonObject capeObj;
