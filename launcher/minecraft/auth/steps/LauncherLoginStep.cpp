@@ -14,7 +14,7 @@ LauncherLoginStep::LauncherLoginStep(AccountData* data) : AuthStep(data) {}
 
 QString LauncherLoginStep::describe()
 {
-    return tr("Accessing Mojang services.");
+    return tr("Accessing Mojang services for legitimate accounts.");
 }
 
 void LauncherLoginStep::perform()
